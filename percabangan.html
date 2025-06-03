@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Percabangan jadwal perkuliahan berdasarkan hari
+        // Variabel hariKuliah berisi nama hari (misal: 'Senin', 'Sabtu', dll)
+        const hariKuliah = prompt('Masukkan nama hari');
+        let pesan = '';
+
+        // Percabangan untuk menentukan status perkuliahan
+        // Senin sampai Jumat adalah hari kuliah
+        // Sabtu dan Minggu adalah hari libur
+        if (hariKuliah === 'Senin') {
+            pesan = 'Hari ' + hariKuliah + ' adalah hari kuliah.';
+        }else if (hariKuliah === 'Selasa') {
+            pesan = 'Hari ' + hariKuliah + ' adalah hari libur.';
+        }else if (hariKuliah === 'Rabu') {
+            pesan = 'Hari ' + hariKuliah + ' adalah hari libur.';
+        }else if (hariKuliah === 'Kamis') {
+            pesan = 'Hari ' + hariKuliah + ' adalah hari libur.';
+        }else if (hariKuliah === 'Jumat') {
+            pesan = 'Hari ' + hariKuliah + ' adalah hari libur.';
+        }else if (hariKuliah === 'Sabtu') {
+            pesan = 'Hari ' + hariKuliah + ' adalah hari libur.';
+        }else if (hariKuliah === 'Minggu') {
+            pesan = 'Hari ' + hariKuliah + ' adalah hari libur.';
+        } else {
+            pesan = 'Nama hari yang dimasukkan tidak valid.';
+        }
+
+        // Menampilkan hasil percabangan ke halaman web saat halaman dimuat
+        window.onload = function() {
+            document.body.innerHTML += '<p>' + pesan + '</p>';
+        };
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
