@@ -12,23 +12,27 @@
         // Percabangan untuk menentukan status perkuliahan
         // Senin sampai Jumat adalah hari kuliah
         // Sabtu dan Minggu adalah hari libur
+        let table = '<table border="1" style="border-color:blue;margin:auto;text-align:center;">' +
+                '<tr style="background-color:#0074D9;color:white;"><th>Hari</th><th>Status</th></tr>';
         if (hariKuliah === 'Senin') {
-            pesan = 'Hari ' + hariKuliah + ' adalah hari kuliah.';
-        }else if (hariKuliah === 'Selasa') {
-            pesan = 'Hari ' + hariKuliah + ' adalah hari libur.';
-        }else if (hariKuliah === 'Rabu') {
-            pesan = 'Hari ' + hariKuliah + ' adalah hari libur.';
-        }else if (hariKuliah === 'Kamis') {
-            pesan = 'Hari ' + hariKuliah + ' adalah hari libur.';
-        }else if (hariKuliah === 'Jumat') {
-            pesan = 'Hari ' + hariKuliah + ' adalah hari libur.';
-        }else if (hariKuliah === 'Sabtu') {
-            pesan = 'Hari ' + hariKuliah + ' adalah hari libur.';
-        }else if (hariKuliah === 'Minggu') {
-            pesan = 'Hari ' + hariKuliah + ' adalah hari libur.';
+            table += '<tr style="background-color:#E3F2FD;"><td>Senin</td><td>Hari Senin adalah hari kuliah.<br>Selamat belajar!</td></tr>';
+        } else if (hariKuliah === 'Selasa') {
+            table += '<tr style="background-color:#BBDEFB;"><td>Selasa</td><td>Hari Selasa adalah hari kuliah.<br>Selamat belajar!</td></tr>';
+        } else if (hariKuliah === 'Rabu') {
+            table += '<tr style="background-color:#B2DFDB;"><td>Rabu</td><td>Hari Rabu adalah hari kuliah.<br>Selamat belajar!</td></tr>';
+        } else if (hariKuliah === 'Kamis') {
+            table += '<tr style="background-color:#FFF9C4;"><td>Kamis</td><td>Hari Kamis adalah hari kuliah.<br>Selamat belajar!</td></tr>';
+        } else if (hariKuliah === 'Jumat') {
+            table += '<tr style="background-color:#FFE0B2;"><td>Jumat</td><td>Hari Jumat adalah hari kuliah.<br>Selamat belajar!</td></tr>';
+        } else if (hariKuliah === 'Sabtu' ) {
+            table += '<tr style="background-color:#FFCDD2;"><td>Sabtu</td><td>Hari Sabtu adalah hari libur.<br>Nikmati waktu istirahat!</td></tr>';
+        } else if (hariKuliah === 'Minggu' ) {
+            table += '<tr style="background-color:#F8BBD0;"><td>Minggu</td><td>Hari Minggu adalah hari libur.<br>Nikmati waktu istirahat!</td></tr>';
         } else {
-            pesan = 'Nama hari yang dimasukkan tidak valid.';
+            table += '<tr style="background-color:#F5F5F5;"><td colspan="2">Nama hari yang dimasukkan tidak valid.</td></tr>';
         }
+        table += '</table>';
+        pesan = table;
 
         // Menampilkan hasil percabangan ke halaman web saat halaman dimuat
         window.onload = function() {
